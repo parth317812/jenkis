@@ -4,7 +4,7 @@ source env/bin/activate
 
 cd /var/lib/jenkins/workspace/jenkins-django/app
 
-python3 manage.py miakemigrations
+python3 manage.py makemigrations
 python3 manage.py migrate
 
 
@@ -12,8 +12,8 @@ echo "migrations done"
 
 cd /var/lib/jenkins/workspace/jenkins-django
 
-sudo cp -rf gunicorn.socket /etc/systememd/system/
-sudo cp -rf gunicorn.service /etc/systememd/system/
+sudo cp -rf gunicorn.socket /etc/systemd/system/
+sudo cp -rf gunicorn.service /etc/systemd/system/
 
 echo "$USER"
 echo "$PWD"
